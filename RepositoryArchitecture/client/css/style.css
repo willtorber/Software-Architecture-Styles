@@ -1,0 +1,29 @@
+.wallpaper{
+	background-image: url('../img/wallpaper2.jpg');
+}
+
+.container{
+	background: rgba(26, 17, 53, 0.4);
+	padding: 20px;
+	border-radius: 40px;
+	color: white;
+}
+
+.margin_button{
+	margin-top: 20px;	
+	background: rgba(11, 26, 55, 0.85);
+	color: white;
+}
+
+.oculto {
+	display: none;
+}
+
+.inmargin {
+	margin: 0px;
+}
+
+.scroll{	
+    overflow-y: auto;
+    height: 260px;
+}

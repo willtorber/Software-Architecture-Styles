@@ -1,0 +1,97 @@
+<!--
+    Author:  Gerson Stick Barrera Delgado
+    Version: 1.0.0
+    Description: Cliente Web deteccion de tornados
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tornado</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">    
+    <link href="css/style.css" rel="stylesheet" type="text/css" />    
+</head>
+
+<body class="wallpaper">
+    
+    <div id="index">
+        <div class="container">
+            <h3 class="">Conexión</h3>
+        </div>
+        <form id="myForm" class="container" action="#">
+            <label>Driver</label>
+            <input class="form-control m-input database" type="text" placeholder="Driver" name="database" 
+            autocomplete="off" value="mysql">
+            <label>Dominio</label>
+            <input class="form-control m-input domain" type="text" placeholder="Dominio" name="domain" autocomplete="off" value="localhost">
+            <label>Puerto</label>
+            <input class="form-control m-input port_bd" type="text" placeholder="Puerto" name="port_bd" autocomplete="off" value="3306">
+            <label>Nombre de la base de datos</label>
+            <input class="form-control m-input name_database" type="text" placeholder="Nombre Base de Datos" name="name_database" autocomplete="off" value="arq_soft_tornados">
+            <label>Nombre de usuario</label>
+            <input class="form-control m-input username" type="text" placeholder="Nombre de usuario" name="username" autocomplete="off" value="root">
+            <label>Contraseña</label>
+            <input class="form-control m-input passwd" type="text" placeholder="Contraseña" name="passwd" autocomplete="off" value="">
+            <center>
+                <button type="submit" id="m_login_signin_submit" name="singin" class="margin_button btn btn-focus">Conectar</button>
+            </center>
+        </form>
+    </div>
+
+    <div class="oculto" id="home">
+        <div class="inmargin">                    
+            <div class="container">                            
+                <div class="col-sm-12">
+                    <div class="container">
+                        <h3 class="">PETICIONES</h3>
+                    </div>
+                    <textarea class="form-control database" type="text" placeholder="DELETE FROM `historicos` WHERE id = #" id="sql" name="sql" autocomplete="off"></textarea>
+                    <center>
+                        <button type="submit" id="ejecutar" name="ejecutar" class="margin_button btn btn-focus">Ejecutar</button>    
+                    </center>
+                    <div id="result" class="scroll"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade oculto" id="m_modal_4">
+        <div data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg margin_modal" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Config Domain</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="col-sm-6 form-group m-form__group">
+                            <p>Domain/IP.</p>
+                            <input id="domain" class="form-control m-input" type="text" name="domain" value="localhost">
+                        </div>
+                        <div class="col-sm-6 form-group m-form__group">
+                            <p>Port.</p>
+                            <input id="port" class="form-control m-input" type="number" name="port" value="2020">
+                        </div>
+                        <center>
+                            <button id="btn_set_domain" type="button" value="#" name="guardar" class="btn btn-focus margin_button">Guardar</button>
+                        </center>
+                        <br>
+                        <div class="col-sm-12">
+                            <div id="msn" class="col-sm-offset-3 col-sm-6 text-center"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- carga de los scripts necesarios -->
+    <noscript>Your browser does not support JavaScript!</noscript>
+    <script src="js/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.5.0/socket.io.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/client-socketio.js"></script>
+    <script src="js/main.js"></script>    
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+{
+    "name": "willtor/repository-architecture",
+    "description": "Aplicación del estilo de Arquitectura Repositorio",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "willtor",
+            "email": "willtor1100@gmail.com"
+        }
+    ],
+    "require": {
+        "workerman/workerman": "^3.5",
+        "workerman/phpsocket.io": "^1.1"
+    }
+}
